@@ -160,6 +160,7 @@ cat > /etc/resolv.conf <<- EOF
 domain ${DOMAIN}
 search ${DOMAIN}
 nameserver ${OWNIP}
+nameserver 8.8.8.8
 EOF
 echo "Enabled local DNS server in /etc/resolv.conf"
 
