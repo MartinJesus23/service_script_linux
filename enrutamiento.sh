@@ -14,6 +14,12 @@ cd /etc/init.d
 read -p "Introduce la ip de la red interna XXX.XXX.XXX.XXX/xx" SERVERIP
 read -p "Introduce la interfaz que sale a internet" INTERFAZ
 
+#Comprobar que no haya campos vacios
+if [ -z $SERVERIP ]  || [ -z $INTERFAZ ] ;then
+    echo "Uno de los valores esta vacio"
+    exit 1
+fi
+
 #Escribimos el script que se ejecutara al inicio
 cat > firewall.sh <<- EOF
 
