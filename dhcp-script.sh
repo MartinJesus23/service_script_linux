@@ -63,7 +63,7 @@ do
 		"Agregar Direccion Fija")
 		echo "Agregando una direccion fija..."
 		read -p "Introduce el nombre del cliente: " CLIENTNAME
-		read -p "Introduce la mac del cliente A2:G3:1W:12:AC:R1" MAC
+		read -p "Introduce la mac del cliente A2:G3:1W:12:AC:R1 :" MAC
 		read -p "Introduce la ip fija que tendra: " IP
 		
 		#Comprobar que no haya campos vacios

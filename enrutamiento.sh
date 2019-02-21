@@ -11,8 +11,8 @@ fi
 cd /etc/init.d
 
 #Parametros para la configuración
-read -p "Introduce la ip de la red interna XXX.XXX.XXX.XXX/xx" SERVERIP
-read -p "Introduce la interfaz que sale a internet" INTERFAZ
+read -p "Introduce la ip de la red interna XXX.XXX.XXX.XXX/XX : " SERVERIP
+read -p "Introduce la interfaz que sale a internet: " INTERFAZ
 
 #Comprobar que no haya campos vacios
 if [ -z $SERVERIP ]  || [ -z $INTERFAZ ] ;then
@@ -28,7 +28,7 @@ echo "1" > /proc/sys/net/ipv4/ip_forward
 
 #Permitir que iptables deje pasar los paquetes y enmascararlos
 iptables -A FORWARD -j ACCEPT
-iptables -t nat -A POSTROUTING -s ${SERVERIP} -o ${INTERFAZ} -j ACCEPT
+iptables -t nat -A POSTROUTING -s ${SERVERIP} -o ${INTERFAZ} -j MASQUERADE
 EOF
 
 #Añadimos la ubicacion del script a local.rc para que se ejecute
