@@ -1,4 +1,5 @@
 #!/bin/bash
+#Autor:Martín Jesús Mañas Rivas
 #
 # Simple script to generate a basic bind configuration for home/lab use
 #

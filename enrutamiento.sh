@@ -1,4 +1,5 @@
 #!/bin/bash
+#Autor:Martín Jesús Mañas Rivas
 
 #Requerir sudo para ejecutar script
 if [[ $UID != 0 ]]; then
